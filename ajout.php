@@ -15,7 +15,7 @@ if(
 ){
 
 //requete 
-$sql = "INSERT INTO `apprenant(nom,prenom,age,naissance,email,tel,promotion,certification)` 
+$sql = "INSERT INTO apprenant(nom,prenom,age,naissance,email,tel,promotion,certification) 
 VALUES
 (:nom,  :prenom,    :age,   :naissance,    :email, :tel,   :promotion,    :certification)"; 
 
