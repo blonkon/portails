@@ -27,7 +27,14 @@ require_once("ajout.php");
                 font-size: 30px;
             }
             .left-side h3{
-                padding: 5%;
+                font-family: 'roboto';
+                width: 20%;
+                font-size: medium;
+                font-weight: 500;
+                text-align: center;
+                border-radius: 20PX;
+                margin-top: 1%;
+                margin-bottom: 1%;
                 background-color: #F38712;
             }
             input{
@@ -117,7 +124,7 @@ require_once("ajout.php");
                 <h1>Inscription</h1>
 
                 <?php if($status==1):?>
-                    <h3>Enregistrer avec success</h3>
+                    <h3>Success</h3>
                 <?php endif?>
 
                 <form method="post" enctype="multipart/form-data" action="fiche.php">
