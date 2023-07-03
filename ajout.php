@@ -1,6 +1,6 @@
 <?php 
 //connexion a la database
-include_once("database.php");
+require_once("database.php");
 
 //requete 
 $sql = "INSERT INTO `apprenant(nom,prenom,age,naissance,email,tel,promotion,certification)` 
@@ -19,5 +19,8 @@ $requete->bindParam(":email",$email,PDO::PARAM_STR);
 $requete->bindParam(":tel",$tel,PDO::PARAM_INT);
 $requete->bindParam(":promotion",$promotion,PDO::PARAM_INT);
 $requete->bindParam(":certification",$certification,PDO::PARAM_STR);
+
+//on execute les requetes pour ajouter
+ $requete->execute();
 
 ?>

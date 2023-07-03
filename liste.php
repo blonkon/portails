@@ -13,23 +13,23 @@
             }
             .liste{
                 height: 500px;
-                width: 50%;
+                width: 70%;
                 border-radius: 10px;
                 border: 1px solid rgba(255, 255, 255, 0.50);
                 background: rgba(223, 222, 222, 0.19);
                 backdrop-filter: blur(15px);
                 padding: 10px;
-                overflow:scroll;
+                overflow:auto;
+                scrollbar-color: #F38712;
             }
             .li{
                 list-style: none;
                 border-radius: 10px;
                 background: rgba(0, 0, 0, 0.39);
-                height: 59px;
+                height: 15%;
                 display: grid;
                 padding: 2px;
                 grid-template-columns: 1fr 1fr 1fr;
-                grid-template-rows: 1fr 1fr;
                 margin-top: 5%;
             }
             .li:hover{
@@ -37,13 +37,14 @@
                 color: black;
             }
             .li img {
-                grid-row-start: span 2;
-                margin-top:8% ;
-                margin-left: 8%;
+                margin-left:8%;
+                margin-top:8% 
             }
-            .li span{
-                grid-row-start: span 2;
-                margin-top:8% ;
+            span{
+                margin-top:2%;
+                line-height: 25px;
+                grid-column-start: 2;
+                grid-column-end: span 3;
             }
             .infos{
                 cursor: pointer;
@@ -68,65 +69,12 @@
             <div class="left-side">
                 <h1>Liste des personnes certifie</h1>
                     <ul  class="liste">
-                        <a href="" class="infos">
-                            <li class="li">
-                                <img src="image/avatar.png">
-                                <span>
-                                <b>Steve Snowden</b>
-                                <i>Promotion 2</i>
-                                </span>
-                            </li>
-                    </a> 
-                    <a href="" class="infos">
-                        <li class="li">
-                            <img src="image/avatar.png">
-                            <span>
-                            <b>Steve Snowden</b>
-                            <i>Promotion 2</i>
-                            </span>
-                        </li>
-                    </a>
-                    <a href="" class="infos">
-                        <li class="li">
-                            <img src="image/avatar.png">
-                            <span>
-                            <b>Steve Snowden</b>
-                            <i>Promotion 2</i>
-                            </span>
-                        </li>
-                    </a>                    <a href="" class="infos">
-                        <li class="li">
-                            <img src="image/avatar.png">
-                            <span>
-                            <b>Steve Snowden</b>
-                            <i>Promotion 2</i>
-                            </span>
-                        </li>
-                    </a>                    <a href="" class="infos">
-                        <li class="li">
-                            <img src="image/avatar.png">
-                            <span>
-                            <b>Steve Snowden</b>
-                            <i>Promotion 2</i>
-                            </span>
-                        </li>
-                    </a>                    <a href="" class="infos">
-                        <li class="li">
-                            <img src="image/avatar.png">
-                            <span>
-                            <b>Steve Snowden</b>
-                            <i>Promotion 2</i>
-                            </span>
-                        </li>
-                    </a>                    <a href="" class="infos">
-                        <li class="li">
-                            <img src="image/avatar.png">
-                            <span>
-                            <b>Steve Snowden</b>
-                            <i>Promotion 2</i>
-                            </span>
-                        </li>
-                    </a>
+                    <!-- Affichage de la liste  -->
+                        <?php 
+                        $page = 2;
+                        include_once("databaseliste.php");
+                        ?>
+
                     </ul>
         </main>
         <footer>

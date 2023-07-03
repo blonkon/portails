@@ -13,39 +13,43 @@
             }
             .liste{
                 height: 500px;
-                width: 50%;
+                width: 70%;
                 border-radius: 10px;
                 border: 1px solid rgba(255, 255, 255, 0.50);
                 background: rgba(223, 222, 222, 0.19);
                 backdrop-filter: blur(15px);
                 padding: 10px;
-                overflow:scroll;
+                overflow:auto;
             }
             .li{
                 list-style: none;
                 border-radius: 10px;
                 background: rgba(0, 0, 0, 0.39);
-                height: 59px;
+                height: 15%;
                 display: grid;
                 /* padding: 2px; */
-                grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
-                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
                 margin-top: 5%;
             }
+            .li:hover{
+                background-color: white;
+                color: black;
+            }
             .li img {
-                grid-row-start: span 2;
-                margin-top:8% ;
-                margin-left: 8%;
+                margin-left:15%;
+                margin-top:15% 
             }
             .span1{
-                /* grid-row-start: span 2; */
+                margin-top:2%;
+                line-height: 25px;
+                grid-column-start: 3;
                 grid-column-end: span 3;
-                padding-left: 4%;
-                margin-top:4% ;
+            }
+            .infos{
+                cursor: pointer;
             }
             .admin_function{
-                grid-row-end: span 2;
-                grid-column-start: 5;
+                grid-column-start: 6;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 border-width: 0px;
@@ -102,7 +106,7 @@
                 <div class="menu">
                     <a href="./index.php">Accueil</a>
                     <a href="./liste.php">Voir liste</a>
-                    <a href="./connexion.php">Se Deconnecter</a>
+                    <a href="./connexion.php">Se connecter</a>
                 </div>
             </nav>
         </header>
@@ -113,130 +117,10 @@
             <div class="left-side">
                 <h1>Liste des personnes certifie</h1>
                     <ul  class="liste">
-                        <div class="button-div"><a href="fiche.php"><button>Ajouter  <img src="image/plus.png"></button></a></div>
-                        <li class="li">
-                            <img src="image/avatar.png">
-                            <span class="span1">
-                            <b>Steve Snowden</b><br>
-                            <i>Promotion 2</i>
-                            </span>
-                            <span class="admin_function">
-                                <div class="div1"><img src="image/modify.png"></div>
-                                <div class="div2"><img src="image/delete.png"></div>
-                            </span>
-                        </li>
-
-                        <li class="li">
-                            <img src="image/avatar.png">
-                            <span class="span1">
-                            <b>Steve Snowden</b><br>
-                            <i>Promotion 2</i>
-                            </span>
-                            <span class="admin_function">
-                                <div class="div1"><img src="image/modify.png"></div>
-                                <div class="div2"><img src="image/delete.png"></div>
-                            </span>
-                        </li>
-                        <li class="li">
-                            <img src="image/avatar.png">
-                            <span class="span1">
-                            <b>Steve Snowden</b><br>
-                            <i>Promotion 2</i>
-                            </span>
-                            <span class="admin_function">
-                                <div class="div1"><img src="image/modify.png"></div>
-                                <div class="div2"><img src="image/delete.png"></div>
-                            </span>
-                        </li>
-                        <li class="li">
-                            <img src="image/avatar.png">
-                            <span class="span1">
-                            <b>Steve Snowden</b><br>
-                            <i>Promotion 2</i>
-                            </span>
-                            <span class="admin_function">
-                                <div class="div1"><img src="image/modify.png"></div>
-                                <div class="div2"><img src="image/delete.png"></div>
-                            </span>
-                        </li>
-                        <li class="li">
-                            <img src="image/avatar.png">
-                            <span class="span1">
-                            <b>Steve Snowden</b><br>
-                            <i>Promotion 2</i>
-                            </span>
-                            <span class="admin_function">
-                                <div class="div1"><img src="image/modify.png"></div>
-                                <div class="div2"><img src="image/delete.png"></div>
-                            </span>
-                        </li>
-                        <li class="li">
-                            <img src="image/avatar.png">
-                            <span class="span1">
-                            <b>Steve Snowden</b><br>
-                            <i>Promotion 2</i>
-                            </span>
-                            <span class="admin_function">
-                                <div class="div1"><img src="image/modify.png"></div>
-                                <div class="div2"><img src="image/delete.png"></div>
-                            </span>
-                        </li>
-                        <li class="li">
-                            <img src="image/avatar.png">
-                            <span class="span1">
-                            <b>Steve Snowden</b><br>
-                            <i>Promotion 2</i>
-                            </span>
-                            <span class="admin_function">
-                                <div class="div1"><img src="image/modify.png"></div>
-                                <div class="div2"><img src="image/delete.png"></div>
-                            </span>
-                        </li>
-                        <li class="li">
-                            <img src="image/avatar.png">
-                            <span class="span1">
-                            <b>Steve Snowden</b><br>
-                            <i>Promotion 2</i>
-                            </span>
-                            <span class="admin_function">
-                                <div class="div1"><img src="image/modify.png"></div>
-                                <div class="div2"><img src="image/delete.png"></div>
-                            </span>
-                        </li>
-                        <li class="li">
-                            <img src="image/avatar.png">
-                            <span class="span1">
-                            <b>Steve Snowden</b><br>
-                            <i>Promotion 2</i>
-                            </span>
-                            <span class="admin_function">
-                                <div class="div1"><img src="image/modify.png"></div>
-                                <div class="div2"><img src="image/delete.png"></div>
-                            </span>
-                        </li>
-                        <li class="li">
-                            <img src="image/avatar.png">
-                            <span class="span1">
-                            <b>Steve Snowden</b><br>
-                            <i>Promotion 2</i>
-                            </span>
-                            <span class="admin_function">
-                                <div class="div1"><img src="image/modify.png"></div>
-                                <div class="div2"><img src="image/delete.png"></div>
-                            </span>
-                        </li>
-                        <li class="li">
-                            <img src="image/avatar.png">
-                            <span class="span1">
-                            <b>Steve Snowden</b><br>
-                            <i>Promotion 2</i>
-                            </span>
-                            <span class="admin_function">
-                                <div class="div1"><img src="image/modify.png"></div>
-                                <div class="div2"><img src="image/delete.png"></div>
-                            </span>
-                        </li>
-
+                    <?php 
+                        $page = 1;
+                        include_once("databaseliste.php");
+                    ?>
                     </ul>
         </main>
         <footer>
