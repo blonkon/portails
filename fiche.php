@@ -21,10 +21,14 @@ require_once("ajout.php");
                 padding-top: 2%;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
             }
-            .left-side h1{
+            .left-side h1, .left-side h3{
                 color: white;
                 margin-left: 30%;
                 font-size: 30px;
+            }
+            .left-side h3{
+                padding: 5%;
+                background-color: #F38712;
             }
             input{
                 margin-bottom: 5%;
@@ -111,24 +115,29 @@ require_once("ajout.php");
             </div>
             <div class="left-side">
                 <h1>Inscription</h1>
+
+                <?php if($status==1):?>
+                    <h3>Enregistrer avec success</h3>
+                <?php endif?>
+
                 <form method="post" enctype="multipart/form-data" action="fiche.php">
 
-                    <input type="text" name="prenom" class="long" placeholder="Prenom">
+                    <input type="text" name="prenom" class="long" placeholder="Prenom" required>
 
                     <label  for="picture" class="photo"><img src="image/profile.png" id="image1"></label>
                     <input type="file" class="photo1" id="picture" accept="image/*" >
 
-                    <input type="text" name="nom" class="long" placeholder="Nom">
+                    <input type="text" name="nom" class="long" placeholder="Nom" required>
                     <!-- <input type="text" name="matricule" class="court" placeholder="Matricule"> -->
   
-                    <input type="date" name="naissance" class="long" placeholder="Date de naissance">
-                    <input type="number" name="age" class="court" placeholder="Age">
+                    <input type="date" name="naissance" class="long" placeholder="Date de naissance" required>
+                    <input type="number" name="age" class="court" placeholder="Age" required>
 
-                    <input type="number" name="certification" class="long" placeholder="Annee de certification">
-                    <input type="number" name="promotion" class="court" placeholder="Promotion">
+                    <input type="date" name="certification" class="long" placeholder="Annee de certification" required>
+                    <input type="number" name="promotion" class="court" placeholder="Promotion" required>
 
-                    <input type="email" name="email" class="long" placeholder="Email">
-                    <input type="number" name="numero" class="court" placeholder="Numero">
+                    <input type="email" name="email" class="long" placeholder="Email" required>
+                    <input type="number" name="numero" class="court" placeholder="Numero" required>
 
                     <br><input type="submit" value="Enregistrer">
                 </form>

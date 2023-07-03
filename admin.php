@@ -75,6 +75,7 @@
                 border-radius: 0 10px 10px 0;
             }
             .button-div{
+                margin-top: 2%;
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
             }
@@ -83,6 +84,7 @@
                 
             }
             button{
+                cursor: pointer;
                 text-align: center;
                 width: auto;
                 padding: 5px;
@@ -117,6 +119,7 @@
             <div class="left-side">
                 <h1>Liste des personnes certifie</h1>
                     <ul  class="liste">
+                    <div class="button-div"><a href="fiche.php"><button>Ajouter  <img src="image/plus.png"></button></a></div>
                     <?php 
                         $page = 1;
                         include_once("databaseliste.php");

@@ -20,8 +20,8 @@
                 backdrop-filter: blur(15px);
                 padding: 10px;
                 overflow:auto;
-                scrollbar-color: #F38712;
             }
+            
             .li{
                 list-style: none;
                 border-radius: 10px;
