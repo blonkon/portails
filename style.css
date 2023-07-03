@@ -1,0 +1,88 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: black;
+    color: white;
+}
+header{
+    font-family: 'Montserrat', Courier, monospace;
+    padding: 20px;
+}
+nav{
+    display: grid;
+}
+.logo{
+    font-weight: 900;
+    font-size: 40px;
+    color: #F38712;
+    padding: 0px;
+}
+footer{
+    display: none;
+}
+.menu{
+    grid-column-start: 6;
+    grid-column-end: span 6;
+    text-align: right;
+    margin-right: 60px;
+    margin-top: 10px;
+}
+.menu a{
+    padding-left: 40px;
+    font-weight: 700;
+    font-size: 20px;
+    
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.left-side{
+    grid-column-start: 2;
+    margin-top: 20%;
+}
+.left-side h1{
+    font-weight: 900;
+    font-size: 40px;
+    color: #F38712; 
+}
+.left-side p{
+    width: 50%;
+    font-size: 24px;
+    letter-spacing: 3px;
+    padding-left: 10px;
+    font-family: 'Lora';
+}
+footer{
+    width: 100%;
+    text-align: center;
+    letter-spacing: 5px;
+    font-family: 'Lora';
+    font-size: 15px;
+    background-color: #F38712;
+    margin-top: 3%;
+}
+button{
+    text-decoration: none;
+    background-color: black;
+    margin: 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    height: 45px;
+    width: 140px;
+    border: 2px solid #F38712;
+    border-radius: 50px;
+}
+.membre{
+    background-color: #F38712;
+}
+a:is(:link,:active,:visited) {
+    text-decoration: none;
+    color: white;
+}
+a:is(:link,:active,:visited).active {
+    color: #F38712;
+}
