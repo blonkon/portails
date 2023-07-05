@@ -80,7 +80,7 @@
                     <input type="text" name="pseudo" id="p" required><br>
                     <label for="m">Mot de passe</label><br>
                     <input type="password" name="password" id="m" required><br>
-                    <input type="submit" value="Connecter"><a href="admin.php">d</a>
+                    <input type="submit" value="Connecter">
                 </form>
             </div>
         </main>
