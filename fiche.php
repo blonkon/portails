@@ -112,7 +112,7 @@ require_once("ajout.php");
                 <div class="menu">
                     <a href="./index.php">Accueil</a>
                     <a href="./liste.php">Voir liste</a>
-                    <a href="./connexion.php">Se Deconnecter</a>
+                    <a href="./deconnexion.php">Deconnecter</a>
                 </div>
             </nav>
         </header>
@@ -123,11 +123,12 @@ require_once("ajout.php");
             <div class="left-side">
                 <h1>Inscription</h1>
 
+                <form method="post" enctype="multipart/form-data" action="fiche.php">
+
                 <?php if($status==1):?>
                     <h3>Success</h3>
                 <?php endif?>
 
-                <form method="post" enctype="multipart/form-data" action="fiche.php">
 
                     <input type="text" name="prenom" class="long" placeholder="Prenom" required>
 

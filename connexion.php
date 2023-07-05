@@ -1,3 +1,7 @@
+<?php  if (!isset($etat)) {
+    $etat=2;
+}   ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -70,11 +74,14 @@
             </div>
             <div class="left-side">
                 <h1>Connexion</h1>
-                <form>
+                <form method="post" action="verification.php">
+                    <?php if ($etat==0): ?>
+                        <p style="color:#F38712;text-align:center;">Pseudo ou Mot de passe incorrect</p>
+                    <?php endif ?>
                     <label class="first" for="p">Pseudo</label><br>
-                    <input type="text" name="pseudo" id="p"><br>
+                    <input type="text" name="pseudo" id="p" required><br>
                     <label for="m">Mot de passe</label><br>
-                    <input type="password" name="password" id="m"><br>
+                    <input type="password" name="password" id="m" required><br>
                     <input type="submit" value="Connecter"><a href="admin.php">d</a>
                 </form>
             </div>
@@ -82,7 +89,7 @@
         <footer>
             <br><br><br>
             Copyright &copy; 2023
-            <br><br><br>
+            <br><br><br> 
         </footer>
     </body>
 </html>

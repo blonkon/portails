@@ -108,7 +108,7 @@
                 <div class="menu">
                     <a href="./index.php">Accueil</a>
                     <a href="./liste.php">Voir liste</a>
-                    <a href="./connexion.php">Se connecter</a>
+                    <a href="./deconnexion.php">Deconnecter</a>
                 </div>
             </nav>
         </header>
