@@ -74,11 +74,14 @@ button{
     height: 45px;
     width: 140px;
     border: 2px solid #F38712;
-    border-radius: 50px;
+    border-radius: 50px; 
+}
+a > button{
     cursor: pointer;
 }
 .membre{
     background-color: #F38712;
+   
 }
 a:is(:link,:active,:visited) {
     text-decoration: none;

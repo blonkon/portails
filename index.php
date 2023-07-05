@@ -13,7 +13,7 @@
                 <div class="logo"><p>KALANSO</p></div>
                 <div class="menu">
                     <a href="./index.php">Accueil</a>
-                    <a href="./liste.php">Voir liste</a>
+                    <a href="liste.php">Voir liste</a>
                     <a href="./connexion.php">Se connecter</a>
                 </div>
             </nav>

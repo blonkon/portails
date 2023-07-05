@@ -1,11 +1,14 @@
-<?php
-       if(!isset($_SESSION)) 
+<?php 
+// la variable page est de savoir si la requete viens d'une page de mon site et non de l'url sinon on retourne chez l'index  
+    if (!isset($page)) {
+        if(!isset($_SESSION)) 
        { 
            session_start(); 
        }
     if (!isset($_SESSION["admin"])) {
         header("location: index.php");
         exit;
+    }   
     }
     // connexion a la database
     require_once("database.php");
