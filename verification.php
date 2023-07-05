@@ -1,4 +1,5 @@
 <?php 
+
     if (isset($_POST["pseudo"]) && isset($_POST["password"])) {
     // connexion a la database
     require_once ("database.php");
@@ -20,8 +21,13 @@
     //  var_dump($resulte);
     // Si les information sont presente dans la base alors
      if(!empty($resulte)) {
-         header("location: ./admin.php");
-         exit;
+        session_start();
+        $_SESSION["admin"]=[
+            "pseudo"=>$pseudo,
+            "password"=>$password
+        ];
+        header("location: ./admin.php");
+        exit;
      }
      else {
         // indique si la connexion a echoue 
@@ -32,5 +38,6 @@
 }
 else{
     $etat = 1;
+    include_once("connexion.php");
 }
 ?>
