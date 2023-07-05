@@ -1,4 +1,5 @@
 <?php 
+    if (isset($_POST)) {
     // connexion a la database
     require_once ("database.php");
 
@@ -16,8 +17,7 @@
     $requete->execute();
 
     $resulte = $requete->fetchAll();
-    var_dump($resulte);
-
+    // var_dump($resulte);
     // Si les information sont presente dans la base alors
      if(!empty($resulte)) {
          header("location: ./admin.php");
@@ -29,4 +29,8 @@
         header("location: ./connexion.php");
         exit;
      }
+}
+else{
+    $etat = 1;
+}
 ?>

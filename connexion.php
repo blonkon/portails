@@ -1,6 +1,6 @@
-<?php  if (!isset($etat)) {
-    $etat=2;
-}   ?>
+<?php  
+    require_once("verification.php");
+?>
 
 <!DOCTYPE html>
 <html>
@@ -74,7 +74,7 @@
             </div>
             <div class="left-side">
                 <h1>Connexion</h1>
-                <form method="post" action="verification.php">
+                <form method="post" action="./connexion.php">
                     <?php if ($etat==0): ?>
                         <p style="color:#F38712;text-align:center;">Pseudo ou Mot de passe incorrect</p>
                     <?php endif ?>
