@@ -1,5 +1,6 @@
 <?php  
     require_once("verification.php");
+    // var_dump($etat);
 ?>
 
 <!DOCTYPE html>
@@ -75,9 +76,6 @@
             <div class="left-side">
                 <h1>Connexion</h1>
                 <form method="post" action="./connexion.php">
-                    <?php if ($etat==0): ?>
-                        <p style="color:#F38712;text-align:center;">Pseudo ou Mot de passe incorrect</p>
-                    <?php endif ?>
                     <label class="first" for="p">Pseudo</label><br>
                     <input type="text" name="pseudo" id="p" required><br>
                     <label for="m">Mot de passe</label><br>

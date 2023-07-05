@@ -75,6 +75,7 @@ button{
     width: 140px;
     border: 2px solid #F38712;
     border-radius: 50px;
+    cursor: pointer;
 }
 .membre{
     background-color: #F38712;
