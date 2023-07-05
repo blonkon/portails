@@ -13,6 +13,9 @@
         <script defer src="activePage.js"></script>
 
         <style>
+            input{
+                color: #FFF;
+            }
             form{
                 width: 50%;
                 /* height: 329px;  */

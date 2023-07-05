@@ -117,7 +117,7 @@ require_once("ajout.php");
                 <div class="logo"><p>KALANSO</p></div>
                 <div class="menu">
                     <a href="./index.php">Accueil</a>
-                    <a href="./liste.php">Voir liste</a>
+                    <a href="./admin.php">Voir liste</a>
                     <a href="./deconnexion.php">Deconnecter</a>
                 </div>
             </nav>
