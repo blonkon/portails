@@ -131,7 +131,7 @@ require_once("ajout.php");
                 <form method="post" enctype="multipart/form-data" action="fiche.php">
 
                 <?php if($status==1):?>
-                    <script>alert(Enregistrer avec succes);</script>
+                    <script>alert("Enregistrer avec succes");</script>
                 <?php endif?>
 
                     <div class="long">
