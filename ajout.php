@@ -1,3 +1,4 @@
+<!-- pour ajouter les information d'un eleemnt dans la base de donnne -->
 <?php 
 //connexion a la database
 require_once("database.php");
@@ -44,7 +45,7 @@ $requete->bindParam(":certification",$certification,PDO::PARAM_STR);
 
 //on execute les requetes pour ajouter
  $requete->execute();
-//Status ici indique si l'ajout a ete effectuer
+
  $status=1;
 }
 else{

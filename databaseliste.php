@@ -1,4 +1,4 @@
-<?php 
+<?php
 // la variable page est de savoir si la requete viens d'une page de mon site et non de l'url sinon on retourne chez l'index  
     if (!isset($page)) {
         if(!isset($_SESSION)) 
@@ -33,8 +33,14 @@
             <br>
                 <i>Promotion <?= strip_tags($apprenant["promotion"]) ?></i>
             </span>
+
             <!-- pour ajouter la partie ajouter et supprimer au cas ou on est sur la page admin -->
-                <?php if($page==1): ?>
+                <?php 
+
+                //Demarrager de la session
+                session_start();
+                
+                if($page==1): ?>
                     <span class="admin_function">
                         <div class="div1"><img src="image/modify.png"></div>
                         <div class="div2"><img src="image/delete.png"></div>
