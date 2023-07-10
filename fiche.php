@@ -32,24 +32,12 @@ require_once("ajout.php");
                 margin-left: 30%;
                 font-size: 30px;
             }
-            .left-side h3{
-                font-family: 'roboto';
-                width: 20%;
-                font-size: medium;
-                font-weight: 500;
-                text-align: center;
-                border-radius: 20PX;
-                margin-top: 1%;
-                margin-bottom: 1%;
-                background-color: #F38712;
-            }
             input{
-                margin-bottom: 5%;
-                margin-left: 5%;
                 height: 30px;
                 border-radius: 10px;
                 background: white;
                 border-style: none;
+                width: 80%;
             }
           
             .long:focus{
@@ -62,25 +50,28 @@ require_once("ajout.php");
                 color: #FFF;
             }
             .photo{
-                height: 50px;
-                width: 60%;
+                height: fit-content;
+                width: 80%;
                 float: right;
-                margin-left: 10%;
+                margin-left: 0;
                 margin-right: 10%;
                 margin-top: 2%;
                 text-align: center;
                 grid-column-start: 4;
+                grid-row-end: span 2;
                 border-radius: 10px;
                 cursor: pointer;
             }
             .photo img{
-                height: 80px;
-                width: 80px;
+                height: 120PX;
+                width: 140PX;
                 border-radius: 10px;
 
             }
             .long{
                 grid-column-start: 1;
+                margin-bottom: 5%;
+                margin-left: 5%;
                 grid-column-end: span 2 ;
                 width: 80%;
             }
@@ -102,13 +93,21 @@ require_once("ajout.php");
                 font-weight: 600;
                 line-height: normal;
                 margin-left:10% ;
+                cursor: pointer;
             }
-            input[name=prenom]{
+            label[for=prenom]{
                 margin-top: 5%;
+            }
+            input[id=email]{
+                margin-bottom: 5%;
+            }
+            label{
+                font-weight:bold;
             }
             .photo1{
                 display: none;
             }
+            
         </style>
     </head>
     <body>
@@ -132,26 +131,46 @@ require_once("ajout.php");
                 <form method="post" enctype="multipart/form-data" action="fiche.php">
 
                 <?php if($status==1):?>
-                    <h3>Success</h3>
+                    <script>alert(Enregistrer avec succes);</script>
                 <?php endif?>
 
-
-                    <input type="text" name="prenom" class="long" placeholder="Prenom" required>
+                    <div class="long">
+                    <label  for="prenom">Prenom</label><br>
+                    <input type="text" name="prenom" id="prenom" placeholder="Prenom" required>
+                    </div>
 
                     <label  for="picture" class="photo"><img src="image/profile.png" id="image1"></label>
                     <input type="file" class="photo1" id="picture" accept="image/*" >
 
-                    <input type="text" name="nom" class="long" placeholder="Nom" required>
+                    <div class="long">
+                    <label  for="nom">Nom</label><br>
+                    <input type="text" name="nom" id="nom" placeholder="Nom" required>
+                    </div>
                     <!-- <input type="text" name="matricule" class="court" placeholder="Matricule"> -->
-  
-                    <input type="date" name="naissance" class="long" placeholder="Date de naissance" required>
-                    <input type="number" name="age" class="court" placeholder="Age" required>
-
-                    <input type="date" name="certification" class="long" placeholder="Annee de certification" required>
-                    <input type="number" name="promotion" class="court" placeholder="Promotion" required>
-
-                    <input type="email" name="email" class="long" placeholder="Email" required>
-                    <input type="number" name="numero" class="court" placeholder="Numero" required>
+                    <div class="long">
+                    <label  for="naissance">Date de naissance</label><br>
+                    <input type="date" name="naissance" id="naissance" required>
+                    </div>
+                    <div class="court">
+                        <label  for="age">Age</label><br>
+                        <input type="number" name="age" id="age" placeholder="Age" required>
+                    </div>
+                    <div class="long" >
+                    <label  for="certification">Date de certification</label><br>
+                        <input type="date" name="certification" id="certification" required>
+                    </div>
+                    <div class="court">
+                        <label for="promotion">Promotion</label>
+                        <input type="number" name="promotion" id="promotion" placeholder="Promotion" required>
+                    </div>
+                    <div class="long">
+                    <label for="email">Email</label><br>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="court">
+                        <label for="numero">Telephone</label>
+                        <input type="number" name="numero" id="numero" placeholder="Numero" required>
+                    </div>
 
                     <br><input type="submit" value="Enregistrer">
                 </form>

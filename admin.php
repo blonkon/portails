@@ -17,6 +17,7 @@
             .left-side h1{
                 color: white;
                 font-size: 30px;
+                margin-left:18%;
             }
             .liste{
                 height: 500px;
@@ -64,7 +65,7 @@
                 padding: 0px;
             }
             .admin_function div{
-                padding-top: 40%;
+                padding-top: 35%;
             }
             .div1{
                 margin:0px ;
@@ -72,8 +73,7 @@
                 background-color: #F38712;
             }
             .div1 img,.div2 img{
-                padding-left: 4%;
-                padding-right: 4%;
+                padding-left: 10%;
             }
             .div2{
                 margin:0px ;
@@ -84,10 +84,11 @@
             .button-div{
                 margin-top: 2%;
                 display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
             }
             .button-div a{
-                grid-column-start: 4;
+                text-align:right;
+                grid-column-start: 6;
                 
             }
             button{

@@ -37,8 +37,8 @@
             <!-- pour ajouter la partie ajouter et supprimer au cas ou on est sur la page admin -->
                 <?php 
 
-                //Demarrager de la session
-                session_start();
+                // //Demarrager de la session
+                // session_start();
                 
                 if($page==1): ?>
                     <span class="admin_function">

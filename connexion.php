@@ -16,6 +16,11 @@
             input{
                 color: #FFF;
             }
+            input[name]:focus{
+                background-color: #f3861200;
+                color: #FFF;
+                
+            }
             form{
                 width: 50%;
                 /* height: 329px;  */
@@ -29,6 +34,8 @@
             .left-side h1{
                 color: white;
                 font-size: 30px;
+                margin-left:18%;
+
             }
             input{
                 width: 60%;
