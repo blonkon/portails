@@ -22,7 +22,7 @@
                 
             }
             form{
-                width: 50%;
+                width: 60%;
                 /* height: 329px;  */
                 background: rgba(223, 222, 222, 0.19);
                 backdrop-filter: blur(15px);
