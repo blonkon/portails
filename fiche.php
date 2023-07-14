@@ -24,6 +24,7 @@ require_once("ajout.php");
                 border-radius: 10px;
                 border: 2px solid #F38712;
                 padding-bottom: 5%;
+                padding-right: 5%;
                 padding-top: 2%;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
             }
@@ -53,8 +54,6 @@ require_once("ajout.php");
                 height: fit-content;
                 width: 80%;
                 float: right;
-                margin-left: 0;
-                margin-right: 10%;
                 margin-top: 2%;
                 text-align: center;
                 grid-column-start: 4;

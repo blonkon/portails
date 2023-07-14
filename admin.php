@@ -21,7 +21,7 @@
             }
             .liste{
                 height: 500px;
-                width: 70%;
+                width: 80%;
                 border-radius: 10px;
                 border: 1px solid rgba(255, 255, 255, 0.50);
                 background: rgba(223, 222, 222, 0.19);
@@ -88,6 +88,7 @@
             }
             .button-div a{
                 text-align:right;
+                grid-column-end: auto;
                 grid-column-start: 6;
                 
             }
