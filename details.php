@@ -7,49 +7,72 @@
         <link rel="stylesheet" href="style.css">
         <script defer src="activePage.js"></script>
         <style>
+            main{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+            .left-side{
+                grid-column-start: 3;
+                grid-column-end: span 2;
+                margin-top: 0;
+            }
             .left-side h1{
                 color: white;
                 font-size: 30px;
-                margin-left:18%;
+                margin-left: 30%;
 
             }
-            .liste{
-                height: 500px;
+            .left-side{
+                margin-top: 20%;
+            }
+            .box{
                 width: 80%;
-                border-radius: 10px;
-                border: 1px solid rgba(255, 255, 255, 0.50);
-                background: rgba(223, 222, 222, 0.19);
-                backdrop-filter: blur(15px);
-                padding: 10px;
-                overflow:auto;
-            }
-            
-            .li{
-                list-style: none;
-                border-radius: 10px;
-                background: rgba(0, 0, 0, 0.39);
-                height: 15%;
                 display: grid;
-                padding: 2px;
-                grid-template-columns: 1fr 1fr 1fr;
-                margin-top: 5%;
-            }
-            .li:hover{
-                background-color: white;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
                 color: black;
+                background-color: white;
+                border: 1px solid #F38712;
+                padding: 3%;
+                border-radius: 20px;
             }
-            .li img {
-                margin-left:8%;
-                margin-top:8% 
-            }
-            span{
-                margin-top:2%;
-                line-height: 25px;
-                grid-column-start: 2;
+            .value{
+                grid-column-start: 3;
                 grid-column-end: span 3;
+                font-size: 100px;
+                letter-spacing: 1px;
+            }
+            .items{
+                font-weight: bold;
+            }             
+            button{
+                cursor: pointer;
+                text-align: center;
+                width: auto;
+                padding: 5px;
+                height: 30px;
+                border-radius: 10px;
+                background: #F38712;
+                color: #FFF;
+                font-size: 15px;
+                font-family: 'Hind Madurai';
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                margin: 0px;
             }
             .infos{
                 cursor: pointer;
+            }
+            .items > p{
+                font-size: 20px;
+                letter-spacing: normal;
+                font-family:'Montserrat';
+            }
+            .value > p{
+                font-size: 20px;
+                letter-spacing: normal;
+                font-family:'Montserrat';
+
             }
         </style>
     </head>
@@ -60,7 +83,7 @@
                 <div class="menu">
                     <a href="./index.php">Accueil</a>
                     <a href="./liste.php">Voir liste</a>
-                    <a href="./connexion.php">Se connecter</a>
+                    <a href="./deconnexion.php">Deconnecter</a>
                 </div>
             </nav>
         </header>
@@ -70,14 +93,38 @@
             </div>
             <div class="left-side">
                 <h1>Information</h1>
-                    <ul  class="liste">
+                    <div  class="box">
                     <!-- Affichage de la liste  -->
+                    <div class="items">
+                        <p class="items1">Matricule</p>
+                        <p class="items2">Prenom</p>
+                        <p class="items3">Nom</p>
+                        <p class="items4">Age</p>
+                        <p class="items5">Naissance</p>
+                        <p class="items6">Numero</p>
+                        <p class="items7">Email</p>
+                        <p class="items8">Promotion</p>
+                        <p class="items9">Certification</p>
+                    </div>
+            
+                    <div class="value">
+                        <p class="value1">12332KD</p>
+                        <p class="value2">Ibrahim</p>
+                        <p class="value3">Diakite</p>
+                        <p class="value4">24</p>
+                        <p class="value5">2/22/2002</p>
+                        <p class="value6">77890965</p>
+                        <p class="value7">Diakkkgz@gmail.com</p>
+                        <p class="value8">Promotion 3</p>
+                        <p class="value9">02/12/2023</p>
+                    </div><br><br>
+                    <div class="button-div"><a href="fiche.php"><button>Modifier</button></a></div>
                         <?php 
                         $page = 2;
                         // include_once("databaseliste.php");
                         ?>
 
-                    </ul>
+        </div>
         </main>
         <footer>
             <br><br><br>
