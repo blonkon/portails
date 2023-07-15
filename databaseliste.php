@@ -43,8 +43,9 @@
                 if($page==1): ?>
                     <span class="admin_function">
                         <div class="div1"><img src="image/modify.png"></div>
-                        <div class="div2"><img src="image/delete.png"></div>
+                        <div class="div2"><img src="image/delete.png" ></div>
                     </span>
+
                 <?php endif?>
         </li>
     </a> 
