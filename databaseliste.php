@@ -25,7 +25,7 @@
 ?>
 
 <?php foreach($apprenants as $apprenant):  ?>
-    <a href="" class="infos">
+    <a href="#" class="infos">
         <li class="li">
             <img src="image/avatar.png">
             <span class="span1">
@@ -42,9 +42,18 @@
                 
                 if($page==1): ?>
                     <span class="admin_function">
-                        <div class="div1"><img src="image/modify.png"></div>
-                        <div class="div2"><img src="image/delete.png" ></div>
+                        <div class="div1" onclick="modif()" ><img src="image/modify.png"></div>
+                        <div class="div2" ><img src="image/delete.png" onclick="delet()"></div>
                     </span>
+                    <script>
+                        function modif(){
+                            //console.log("iittijijfsj");
+                           window.location.href = 'modif.php';
+                        }
+                        function delet(){
+                            window.location.href = "del.php";
+                        }
+                    </script>
 
                 <?php endif?>
         </li>
