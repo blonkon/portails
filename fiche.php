@@ -17,6 +17,62 @@ require_once("ajout.php");
         <link rel="stylesheet" href="style.css">
         <script defer src="activePage.js"></script>
         <style>
+              #container{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                top: 0;
+                left: 0;
+                background-color: rgba(20, 20, 20, 0.9);
+            }
+            #popup h1{
+                color: black;
+                margin: 0;
+                padding: 0;
+            }
+            #popup{
+                margin-top: 15%;
+                margin-left: 40%;
+                padding: 1%;
+                width: 300px;
+                height: 200px;
+                border-radius: 20px;
+                color: black;
+                background-color: #FFF;
+                text-align: center;
+                font-size: xx-small;
+
+            }
+            #popup p{
+                text-align: center;
+                padding: 0;
+                font-size: medium;
+                margin: 0px;
+                letter-spacing: normal;
+                margin-top: 4%;
+            }
+            #popup img{
+                width: 64px;
+                height: 64px;
+            }
+            #button{
+                width: 100%;
+                background-color: #F38712;
+                border-radius: 5px;
+                font-size: 12px;
+                color: #FFF;
+                font-weight: bold;
+                cursor: pointer;
+            }
+            /* #popup button{
+                font-size: 15px;
+                background-color: #F38712;
+                cursor: pointer;
+                width: 45px;
+                height: 45px;
+            } */
             form{
                 display: grid;
                 width: 80%;
@@ -126,11 +182,27 @@ require_once("ajout.php");
             </div>
             <div class="left-side">
                 <h1>Inscription</h1>
-
+             
                 <form method="post" enctype="multipart/form-data" action="fiche.php">
-
+                
+                    
                 <?php if($status==1):?>
-                    <script>alert("Enregistrer avec succes");</script>
+                    <!--   Popup               -->
+                    <div id="container" style="font-size: 5px;">
+                        <div id="popup">
+                            <img src="image/true.svg">
+                            <br>
+                            <h1>Reussi</h1>
+                            <p style="margin-left:25%;margin-top:5%;">Vos donnees ont ete enregistrer</p>
+                            <p id="button" style="font-size: 25px;margin-top:5%;" onclick="bien()">ok</p>
+                            <script>
+                                function bien(){
+                                    document.getElementById("container").style.display = "none";
+                                }
+                            </script>
+                        </div>
+                        </div>
+                        <!--       fin popup           -->
                 <?php endif?>
 
                     <div class="long">
@@ -187,7 +259,7 @@ require_once("ajout.php");
             profile.onchange = function(){
                 profile_standard.src = URL.createObjectURL(profile.files[0]);
             }
-
+            
         </script>
     </body>
 </html>

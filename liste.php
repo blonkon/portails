@@ -6,7 +6,7 @@
         <title>Portail</title>
         <link rel="stylesheet" href="style.css">
         <script defer src="activePage.js"></script>
-        <style>
+       <style>
             .left-side h1{
                 color: white;
                 font-size: 30px;

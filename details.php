@@ -117,12 +117,28 @@
     <body>
         <header>
             <nav>
-                <div class="logo"><p>KALANSO</p></div>
-                <div class="menu">
-                    <a href="./index.php">Accueil</a>
-                    <a href="./liste.php">Voir liste</a>
-                    <a href="./deconnexion.php">Deconnecter</a>
-                </div>
+                   <!-- menu pour admin  -->
+
+                   <?php
+                    session_start();
+                    if (isset($_SESSION["admin"])){
+                       echo "<div class=\"logo\"><p>KALANSO</p></div>
+                        <div class=\"menu\">
+                            <a href=\"./index.php\">Accueil</a>
+                            <a href=\"./admin.php\">Voir liste</a>
+                            <a href=\"./deconnexion.php\">Deconnecter</a>
+                        </div>";   
+                    }
+                    else {
+                        echo "
+                        <div class=\"logo\"><p>KALANSO</p></div>
+                        <div class=\"menu\">
+                            <a href=\"./index.php\">Accueil</a>
+                            <a href=\"liste.php\">Voir liste</a>
+                            <a href=\"./connexion.php\">Se connecter</a>
+                        </div>";
+                    }
+                ?>
             </nav>
         </header>
         <main>
