@@ -1,9 +1,2 @@
-RewriteEngine On
-
-# Vérifier si l'URL est directement accessible
-RewriteCond %{ENV:REDIRECT_STATUS} ^$
-RewriteCond %{REQUEST_URI} \.(png|jpg|jpeg|svg)$
-RewriteRule ^ - [F]
-
-# Autoriser l'affichage des images lorsqu'elles sont intégrées dans une page web
-Header set X-Content-Type-Options "nosniff"
+#RewriteEngine On
+#RewriteRule ^ - [F]
