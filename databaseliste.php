@@ -14,7 +14,7 @@
     require_once("database.php");
 
     //requete sql
-    $sql="Select nom,prenom,promotion from apprenant order by prenom asc";
+    $sql="Select nom,prenom,promotion,images from apprenant order by prenom asc";
 
     //execute la requete
     $requete = $db->query($sql);
@@ -27,11 +27,13 @@
 <?php foreach($apprenants as $apprenant):  ?>
     <a href="#" class="infos">
         <li class="li">
-            <img src="image/avatar.png">
+            <?php
+            echo("<img src="."/files".">");
+            ?>
             <span class="span1">
                 <b><?= strip_tags($apprenant["prenom"])."   ".strip_tags($apprenant["nom"]) ?></b>
             <br>
-                <i>Promotion <?= strip_tags($apprenant["promotion"]) ?></i>
+                <i>Promotion <?= strip_tags($apprenant["promotion"]).$apprenant["images"] ?></i>
             </span>
 
             <!-- pour ajouter la partie ajouter et supprimer au cas ou on est sur la page admin -->

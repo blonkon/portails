@@ -210,8 +210,8 @@ require_once("ajout.php");
                     <input type="text" name="prenom" id="prenom" placeholder="Prenom" required>
                     </div>
 
-                    <label  for="picture" class="photo"><img src="image/profile.png" id="image1"></label>
-                    <input type="file" class="photo1" id="picture" accept="image/*" >
+                    <label  for="picture" class="photo"><img src="image/pro.png" id="image1"></label>
+                    <input type="file" class="photo1" id="picture" name="photo" accept="image/*" required>
 
                     <div class="long">
                     <label  for="nom">Nom</label><br>
