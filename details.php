@@ -1,3 +1,11 @@
+<?php if(!isset($_SESSION)) 
+       { 
+           session_start(); 
+       }
+    if (!isset($_SESSION["admin"])) {
+        header("location: index.php");
+        exit;
+    }   ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -120,7 +128,28 @@
                    <!-- menu pour admin  -->
 
                    <?php
-                    session_start();
+                    // session_start();
+                    $id = $_POST['id'];
+                     // connexion a la database
+                    require_once("database.php");
+                    //requete sql
+                    $sql="Select * from apprenant where id=:id";
+
+                    $requete = $db->prepare($sql);
+
+                    //place a la definition des variable
+                    $prenom = htmlspecialchars($id);
+                    $requete->bindParam(":id",$id,PDO::PARAM_INT);
+
+                    //on execute les requetes pour ajouter
+                    $requete->execute();
+
+
+                    //recuperer les donnees 
+                    $apprenants = $requete->fetchAll();
+                    // var_dump($apprenants);
+
+
                     if (isset($_SESSION["admin"])){
                        echo "<div class=\"logo\"><p>KALANSO</p></div>
                         <div class=\"menu\">
@@ -149,8 +178,11 @@
                 <h1>Information</h1>
                     <div  class="box">
                         <div class="profile">
+                        <?php foreach($apprenants as $apprenant):  ?>
+                            
                             <!-- <div> -->
-                                <img src="image/main.png" onclick="plein(this.src)">
+
+                                <img src=<?= "files/".$apprenant["images"]?> onclick="plein(this.src)">
                             <!-- </div> -->
                         </div>
                     <div class="box-content">
@@ -167,18 +199,19 @@
                         </div>
                 
                         <div class="value">
-                            <p class="value1">12332KD</p>
-                            <p class="value2">Ibrahim</p>
-                            <p class="value3">Diakite</p>
-                            <p class="value4">24</p>
-                            <p class="value5">2/22/2002</p>
-                            <p class="value6">77890965</p>
-                            <p class="value7">Diakkkgazaeeaazzezeezazz@gmail.com</p>
-                            <p class="value8">Promotion 3</p>
-                            <p class="value9">02/12/2023</p>
+                            <p class="value1">Indisponible</p>
+                            <p class="value2"><?= strip_tags($apprenant["prenom"]) ?></p>
+                            <p class="value3"><?= strip_tags($apprenant["nom"]) ?></p>
+                            <p class="value4"><?= strip_tags($apprenant["age"]) ?></p>
+                            <p class="value5"><?= strip_tags($apprenant["naissance"]) ?></p>
+                            <p class="value6"><?= strip_tags($apprenant["tel"]) ?></p>
+                            <p class="value7"><?= strip_tags($apprenant["email"]) ?></p>
+                            <p class="value8">Promotion <?= strip_tags($apprenant["promotion"]) ?></p>
+                            <p class="value9"><?= strip_tags($apprenant["certification"]) ?></p>
                         </div>
                     </div>
-                    <div class="button-div"><a href="fiche_modif.php"><button>Modifier</button></a></div>
+                    <?php endforeach ?>
+                    <div class="button-div"><a href="#"><button>Modifier</button></a></div>
                         <!--        Plein ecran gestion              -->
                         <div id="container" >
                             <img id="fullscreen" onclick="fermer()">

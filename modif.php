@@ -1,10 +1,13 @@
-
+<!-- 
 <?php
 session_start();
 if (!isset($_SESSION["admin"])) {
     header("location: index.php");
     exit;
 }
+$modif=1;
+//la partie modification
+
 require_once("ajout.php");
 ?>
 
@@ -211,7 +214,7 @@ require_once("ajout.php");
                     </div>
 
                     <label  for="picture" class="photo"><img src="image/profile.png" id="image1"></label>
-                    <input type="file" class="photo1" id="picture" accept="image/*" >
+                    <input type="file" class="photo1" id="picture" name ="photo" accept="image/*" required>
 
                     <div class="long">
                     <label  for="nom">Nom</label><br>
@@ -261,4 +264,4 @@ require_once("ajout.php");
             }
         </script>
     </body>
-</html>
+</html> -->

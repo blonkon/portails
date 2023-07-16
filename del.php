@@ -1,4 +1,3 @@
-<script>alert("OK");</script>
 <?php
 // la variable page est de savoir si la requete viens d'une page de mon site et non de l'url sinon on retourne chez l'index  
         if(!isset($_SESSION)) 

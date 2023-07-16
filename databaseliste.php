@@ -35,10 +35,10 @@
             $source = "files/$nam";
             echo('<img style="width: 32px;height: 32px;border-radius: 5px;" src="'.$source.'">');
             ?>
-            <span class="span1">
+            <span class="span1" id="details<?= $apprenant["id"] ?>">
                 <b><?= strip_tags($apprenant["prenom"])."   ".strip_tags($apprenant["nom"]) ?></b>
             <br>
-                <i>Promotion <?= strip_tags($apprenant["promotion"]).$apprenant["images"] ?></i>
+                <i>Promotion <?= strip_tags($apprenant["promotion"]) ?></i>
             </span>
 
             <!-- pour ajouter la partie ajouter et supprimer au cas ou on est sur la page admin -->
@@ -55,10 +55,27 @@
                     <script>
                         function modif(){
                             //console.log("iittijijfsj");
-                           window.location.href = 'modif.php';
+                            // Cretion d'un formulaire
+                            // var form = document.createElement('form');
+                            // form.method = 'post';
+                            // form.action = 'modif.php';
+
+                            // // Ici un champ de formulaire pour le paramètre
+                            // var Input = document.createElement('input');
+                            // Input.type = 'hidden';
+                            // Input.name = 'id';
+                            // Input.value = id;
+
+                            // // Ajouter le champ de formulaire au formulaire
+                            // form.appendChild(Input);
+
+                            // // Ajouter le formulaire à la page et le soumettre
+                            // document.body.appendChild(form);
+                            // form.submit();
+                        //    window.location.href = 'modif.php';
                         }
                         function delet(){
-                            alert(id);
+                            // alert(id);
                             // Créer une instance de l'objet XMLHttpRequest
                             var xhr = new XMLHttpRequest();
 
@@ -73,9 +90,34 @@
 
                             // Envoyer la requête avec les données
                             xhr.send(data);
-                            //pour rafraichir la page vu que c'est une requete ajax donc elle s'execute en arriere plan
+                            //pour rafraichir la page vu que c'est une requete ajax donc elle s'execute en arriere
                             location.reload();
                         }
+                        document.getElementById("details<?= $apprenant["id"] ?>").addEventListener('click', function(event){
+
+                            // // Redirection vers la page PHP avec le paramètre
+                            // window.location.href = "details.php?parametre=" + encodeURIComponent(id);
+                            // location.reload();
+                            // alert(id);
+                            var form = document.createElement('form');
+                            form.method = 'post';
+                            form.action = 'details.php';
+
+                            // // Ici un champ de formulaire pour le paramètre
+                            var Input = document.createElement('input');
+                            Input.type = 'hidden';
+                            Input.name = 'id';
+                            Input.value = <?= $apprenant["id"] ?>;
+
+                            // // Ajouter le champ de formulaire au formulaire
+                            form.appendChild(Input);
+
+                            // // Ajouter le formulaire à la page et le soumettre
+                            document.body.appendChild(form);
+                            form.submit();
+                        //    window.location.href = 'modif.php';
+
+                        });
                     </script>
 
                 <?php endif?>

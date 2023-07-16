@@ -1,5 +1,13 @@
 <!-- pour ajouter les information d'un eleemnt dans la base de donnne -->
 <?php 
+ if(!isset($_SESSION)) 
+ { 
+     session_start(); 
+ }
+if (!isset($_SESSION["admin"])) {
+  header("location: index.php");
+  exit;
+}   
 //connexion a la database
 require_once("database.php");
 
@@ -72,6 +80,10 @@ $requete->bindParam(":images",$images,PDO::PARAM_STR);
  $requete->execute();
 
  $status=1;
+ //si la requete vien de la page modif
+//  if ($modif==1) {
+//     header("location : del.php");
+//  }
 }
 else{
     $status=0;
