@@ -28,7 +28,9 @@
     <a href="#" class="infos">
         <li class="li">
             <?php
-            echo("<img src="."/files".">");
+            $nam = $apprenant["images"];
+            $source = "files/$nam";
+            echo('<img src="'.$source.'">');
             ?>
             <span class="span1">
                 <b><?= strip_tags($apprenant["prenom"])."   ".strip_tags($apprenant["nom"]) ?></b>

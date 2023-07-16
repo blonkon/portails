@@ -15,11 +15,11 @@ if (!empty($_FILES)) {
     $correct = array("png", 'jpg',"svg");
     //generation d'un nom unique pour notre photo
     $newname = md5(uniqid());
-    $dossier = "/files/$newname.$type";
+    $dossier = "files/$newname.$type";
 
-    if (in_array(strtolower($type),$correct) && ($taille >1024*1024)) {
+    if (in_array(strtolower($type),$correct) && ($taille <1024*1024)) {
         if (move_uploaded_file($tmpfichier, $dossier)) {
-            chmod($doc, 0644);
+            chmod($dossier, 0644);
             $upload = 1;}
     }
     }
@@ -34,7 +34,7 @@ if(
                         &&!empty($_POST["certification"])
                         &&!empty($_POST["email"])
                         &&!empty($_POST["numero"]
-                        &&!$upload==1)
+                        &&$upload==1)
 ){
 
 
@@ -55,7 +55,7 @@ $promotion = htmlspecialchars($_POST["promotion"]);
 $certification = htmlspecialchars($_POST["certification"]);
 $email = htmlspecialchars($_POST["email"]);
 $tel = htmlspecialchars($_POST["numero"]);
-$images=$newname.$type;
+$images="$newname.$type";
 
 // Injection de parametre
 $requete->bindParam(":nom",$nom,PDO::PARAM_STR);
