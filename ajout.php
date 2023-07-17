@@ -8,6 +8,9 @@ if (!isset($_SESSION["admin"])) {
   header("location: index.php");
   exit;
 }   
+try {
+    //code...
+
 //connexion a la database
 require_once("database.php");
 
@@ -87,6 +90,12 @@ $requete->bindParam(":images",$images,PDO::PARAM_STR);
 }
 else{
     $status=0;
+}
+} catch (PDOException $e) {
+    // Capturer l'exception et afficher un message d'erreur
+    echo "Erreur : " . $e->getMessage();
+    header("location: fiche.php"); // Rediriger l'utilisateur vers la page "fiche.php"
+    exit;
 }
 
 ?>
